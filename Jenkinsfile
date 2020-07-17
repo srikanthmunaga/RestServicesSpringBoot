@@ -1,15 +1,9 @@
-#!groovy
+node {
+  stage('HelloWorld') {
+    echo 'Hello World'
+  }
 
-pipeline {
-
-stage('checkout'){
-    steps{
-        script{
-            checkout
-        }
-    }
+  stage('git clone') {
+    git clone "ssh://git@mywebsite.com/myrepo.git"
+  }
 }
-
-
-}
-
