@@ -1,6 +1,7 @@
 #!groovy
 
-node('medium-slave'){
+pipeline {
+
 stage('checkout'){
     steps{
         script{
@@ -8,6 +9,7 @@ stage('checkout'){
         }
     }
 }
+
 
 }
 
